@@ -1,7 +1,7 @@
 import 'dart:convert';
 
 
-import 'package:app_listado/models/users_model.dart';
+import 'package:app_listado/models/tareas_model.dart';
 import 'package:http/http.dart' as http;
 import 'package:logger/logger.dart';
 
@@ -11,7 +11,7 @@ class ApiService {
 final Logger logger = Logger();
 
 
-Future<List<dynamic>> getTareas() async {
+Future<List<Tarea>> getTareas() async {
   try {
     final response = await http.get(Uri.parse('$baseUrl/tareas/'));
     if (response.statusCode == 200) {
