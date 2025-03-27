@@ -1,4 +1,4 @@
-class UsersModel {
+class Tarea {
 
  final int id;
   final String name;
@@ -7,15 +7,15 @@ class UsersModel {
 
 
 
- UsersModel({
+ Tarea({
     required this.id,
     required this.name,
     required this.detalle,
     required this.estado,
   });
 
-  factory UsersModel.fromJson(Map<String, dynamic> json) {
-    return UsersModel(
+  factory Tarea.fromJson(Map<String, dynamic> json) {
+    return Tarea(
       id: json['id'],
       name: json['name'],
       detalle: json['detalle'],
